@@ -1,0 +1,89 @@
+*{
+    margin: auto;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 90%;
+}
+
+body{
+    background: rgb(214, 214, 214);
+}
+
+.cabecera{
+    max-width: 120em;
+    align-items: center;
+    background: coral;
+    display:flexbox;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.cabecera h1{
+    text-align: center;
+    margin: 20px;
+}
+
+.parte1{
+    max-width: 30em;
+    align-items: center;
+
+}
+
+.maquinas ul{
+    list-style: none;
+    max-width: 80em;
+    padding: 1em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Indice{
+    width: 30em;
+    margin: 0 1em 0 0;
+    padding: 0 20px;
+	height: 40px;
+	border: none;
+	color: #fff;
+	background: #535353;
+	border-radius: 3px;
+	font-size: 16px;
+    cursor: pointer;
+}
+
+.Indice .activo{
+    width: 30em;
+    margin: 0.5em;
+    padding: 0 20px;
+	height: 40px;
+	border: none;
+	color: #fff;
+	background: #535353;
+	border-radius: 3px;
+	font-size: 16px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.resultado{
+min-height: 10em;
+position: relative;
+}
+
+.bloque{
+margin: 1em;
+padding: 1em;
+position: absolute;
+top: 2em;
+opacity: 0;
+transition: all .5s ease;
+}
+
+.bloque.activo{
+opacity: 1;
+}
