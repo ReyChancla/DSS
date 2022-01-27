@@ -2,26 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Ventanas</title>
 </head>
 <body>
-    <h1>Calculo de minimo de maquina</h1>
+    <div class="cabecera">
+        <h1>Minimos de maquina</h1>
+        <div class="parte1">
+            <input class="caja" type="number">
+            <b> x </b>
+            <input class="caja" type="number">
+            <button onclick="calcular()">Calcular</button>
+            <div class="rectangulo"></div>
+        </div>
 
-    <select id="Canales">
-        <option id="E" value="2">E</option>
-        <option id="B" value="3" >B</option>
-        <option id="C" value="4">C</option>
-        <option id="BC" value="6" >BC</option>
-        <option id="EB" value="5" >EB</option>
-    </select><br><br>
-    <input id="ancho" type="text">
-    <input id="largo" type="text">
-    <input id="alto" type="text">
-    <button onclick="calcular()">Calcular</button>  
-    <br>
-    <br>
-    <p>Tamaño de plancha: <br>
-    <span id="Tamaño_de_plancha"></span></p>
-<script  src="script.js"></script>
+        <div class="maquinas">
+            <ul>
+                <li class="Indice">Dong Fang</li>
+                <li class="Indice">Bobst</li>
+                <li class="Indice">Curioni</li>
+                <li class="Indice">Martin</li>
+                <li class="Indice">Onduladora</li>
+            </ul>
+        </div>
+    </div>
+    <div class="resultado">
+        <div class="bloque">esta es la primera parte.</div>
+        <div class="bloque">Despues viene la segunda.</div>
+        <div class="bloque">Tambien viene una tercera.</div>
+        <div class="bloque">Por si acaso una cuarta.</div>
+        <div class="bloque">Y yo suma una quinta de poco uso.</div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
