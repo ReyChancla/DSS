@@ -1,131 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Ventanas</title>
-</head>
-<body>
-<!-- Esta parte calcula los dato de tamaño de la plancha e indica
-en que maquinas puede ir -->
-    
-    <div class="cabecera">
-        <h1>Minimos de maquina</h1>
-        <div class="sizeboard">
-            <div>
-                <input class="caja" type="number" id="ancho" placeholder="Ancho">
-                <b> x </b>
-                <input class="caja" type="number" id="largo" placeholder="Largo">
-            </div>
-            <div>
-                <input class="caja" type="number" id="posesAncho" value="1">
-                <b> x </b>
-                <input class="caja" type="number" id="posesLargo" value="1">
-            </div>
-            <button class="boton1" onclick="calcularsize()">Calcular</button>
-        </div>
-        <div>
-            <p>Maquinas validas para estas medidas de plancha: <br>
-            <span id="resultadoSizeBoard"></span></p>
-            
-        </div>
-        <div class="maquinas">
-            <ul>
-                <li class="Indice" id="DongFangMaquina">Dong Fang</li>
-                <li class="Indice" id="BobstMaquina">Bobst</li>
-                <li class="Indice" id="CurioniMaquina">Curioni</li>
-                <li class="Indice" id="MartinMaquina">Martin</li>
-                <li class="Indice" id="OnduladoraMaquina">Onduladora</li>
-            </ul>
-        </div>
-    </div>
+*{
+    margin: 0;
+    padding: 0;
+}
 
-    <!-- Aquí estan las diferentes cajas de cada una de las maquinas
-para generar los datos correspondientes a cada una de ellas -->
+body{
+    background: rgb(228, 228, 228);
+}
 
-    <div class="resultado">
-        <div class="bloque">
-            <div>
-                <h2>Datos minimos y maximos de Dong Fang (DF)</h2>
-                <article>
-                    <p>combinación en onduladora</p>
-                    <form action="">
-                        <select id="Tintas">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
-                    </form>
-                    <div>
-                        <button onclick="calcularDatosDf()">Calcular</button>
-                        <input type="number" id="acoplesBobinaDf" placeholder="Acoples de bobina" value="1">
-                        <p><span id="DatosDF">"DatosDF"</span></p>
-                        
-                    </div>
-                </article>
-            </div>
-        </div>
-        <div class="bloque">
-            <div>
-                <h2>Datos minimos y maximos de Bobst)</h2>
-                <article>
-                    <p>con o sin impresión</p>
-                    <p>datos Docupoint</p>
-                </article>
-            </div>
-        </div>
-        <div class="bloque">
-            <div>
-                <h2>Datos minimos y maximos de Curioni</h2>
-                <article>
-                    <p>B1 abierta</p>
-                    <p>B1 cerrada</p>
-                    <p>plancha impresa</p>
-                    <p>media caja</p>
-                    <p>datos Docupoint</p>
-                    <p>impresión</p>
-                </article>
-            </div>
-        </div>
-        <div class="bloque">
-            <div>
-                <h2>Datos minimos y maximos de Martin</h2>
-                <article>
-                    <div>
-                        <b>Medidas internas</b><br>
-                        <input type="number" id="anchoMartin" placeholder="Ancho"><b> x </b>
-                        <input type="number" id="largoMartin" placeholder="Largo"><b> x </b>
-                        <input type="number" id="altoMartin" placeholder="Alto"><b> + </b>
-                        <select id="canalesMartin">
-                           <!--  <option value="canalE">Canal E</option> -->
-                            <option value="canalB">Canal B</option>
-                            <option value="canalC">Canal C</option>
-                            <option value="canalEB">Canal EB</option>
-                            <option value="canalBC">Canal BC</option>
-                            <!-- <option value="canalAC">Canal AC</option> -->
-                        </select><b> + </b>
-                        <input type="number" id="trimMartin" placeholder="Trim para masas" value="0">
-                        <button id="calcularMartin" onclick="calcularMartin()">Calcular</button>
-                        <p><span id="DatosMartin"></span></p>
-                    </div>
-                    <p>impresión</p>
-                </article>   
-            </div>
-        </div>
-        <div class="bloque">
-            <div>
-                <h2>Datos minimos y maximos de Onduladora</h2>
-                <p>Datos de plancha</p>
-                <p>Datos Fang Fold (FF)</p>
-                <p>Datos impresión FF</p>
-                <p>Datos Docupoint</p>
-            </div>
-        </div>
-    </div>
+div{
+    margin: 20px;
+    padding: 20px;
+    background: chocolate;
+    border-radius: 10px;
+}
+div div{
+    background: cornflowerblue;
+}
+div div div{
+    background: crimson;
+}
+div div div div{
+    background: rgb(36, 226, 36);
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+/*{
+    margin: auto;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background: rgb(214, 214, 214);
+    max-height: 90%;
+}
+
+.cabecera{
+    max-width: 90%;
+    align-items: center;
+    background: coral;
+    display:flexbox;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.cabecera h1{
+    text-align: center;
+    margin: 20px;
+}
+
+.parte1{
+    max-width: 80%;
+    align-items: center;
+
+}
+
+.maquinas ul{
+    list-style: none;
+    max-width: 1000px;
+    padding: 1em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Indice{
+    width: 30em;
+    margin: 0 1em 0 0;
+    padding: 0 20px;
+	height: 40px;
+	border: none;
+	color: #fff;
+	background: #535353;
+	border-radius: 3px;
+	font-size: 16px;
+    cursor: pointer;
+}
+
+.Indice .activo{
+    width: 30em;
+    margin: 0.5em;
+    padding: 0 20px;
+	height: 40px;
+	border: none;
+	color: #fff;
+	background: #535353;
+	border-radius: 3px;
+	font-size: 16px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.resultado{
+min-height: 80%;
+position: relative;
+}
+
+.bloque{
+position: relative;
+opacity: 1;
+transition: all .5s ease;
+}
+
+.bloque.activo{
+opacity: 1;
+}
+
+/* .resultado input{
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    border: none;
+    background: #fff;
+    border-radius: 3px;
+    inwebkit-inner-spin-button,
+    -webkit-appearance: none;
+} */ 
+
